@@ -1,4 +1,4 @@
-﻿
+
 var restarting = false;
 var startedat = new Date();
 
@@ -120,10 +120,11 @@ function check() {
 
         var title = $("textarea.Input");
         var editor = $(".Input.Editable");
-        var layout = $(".Layout");
+        var layout = $(".WriteIndexLayout");
         var headline = $(".WriteIndex-pageTitle");
 
-        var container = $(".Layout-main");
+        //var container = $(".Layout-main");
+        var container = $(".PostEditor-wrapper");
         var edit_zone = $(".Input.Editable [data-contents='true']");
 
         if (title.length == 1
@@ -143,7 +144,7 @@ function check() {
             editor[0].style.backgroundColor = "#555588";
             editor[0].style.color = "#ffffff";
 
-            $(".Layout")[0].style.backgroundColor = "#111133";
+            layout[0].style.backgroundColor = "#111133";
 
             if (caption.length > 0 && caption != "写文章") {
                 container.append($textarea);
